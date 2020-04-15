@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["addColorStop\t( offset: double, color: DOMString ): void CanvasGradient","addColorStop(${1:offset: double}, ${2:color: DOMString})"]]}

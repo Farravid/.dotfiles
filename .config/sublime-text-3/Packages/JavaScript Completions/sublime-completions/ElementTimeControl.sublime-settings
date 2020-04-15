@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["beginElementAt\t( offset: float ): void ElementTimeControl","beginElementAt(${1:offset: float})"],["endElementAt\t( offset: float ): void ElementTimeControl","endElementAt(${1:offset: float})"],["beginElement\t(): void ElementTimeControl","beginElement()"],["endElement\t(): void ElementTimeControl","endElement()"]]}

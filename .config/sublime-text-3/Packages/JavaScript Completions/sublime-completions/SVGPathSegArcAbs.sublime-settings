@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["largeArcFlag\t: boolean SVGPathSegArcAbs","largeArcFlag"],["sweepFlag\t: boolean SVGPathSegArcAbs","sweepFlag"],["angle\t: float SVGPathSegArcAbs","angle"],["r1\t: float SVGPathSegArcAbs","r1"],["r2\t: float SVGPathSegArcAbs","r2"],["x\t: float SVGPathSegArcAbs","x"],["y\t: float SVGPathSegArcAbs","y"]]}

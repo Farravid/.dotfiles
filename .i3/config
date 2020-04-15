@@ -15,7 +15,7 @@ default_floating_border normal
 hide_edge_borders none
 
 # change borders
-bindsym $mod+u border none
+#bindsym $mod+u border none
 bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
@@ -58,6 +58,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 #Programacion
 bindsym $mod+p exec subl3
+bindsym $mod+u exec unityhub
 
 #Musica
 bindsym $mod+m exec spotify

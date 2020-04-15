@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["Error\t( message: string ): Error Error","new Error(${1:message: string})"],["Error\t( message: string ): Error Error","Error(${1:message: string})"],["message\t: string Error","message"],["name\t: string Error","name"]]}

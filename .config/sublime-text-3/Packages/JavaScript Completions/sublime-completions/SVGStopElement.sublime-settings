@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["getPresentationAttribute\t( name: DOMString ): CSSValue SVGStopElement","getPresentationAttribute(${1:name: DOMString})"],["className\t: SVGAnimatedString SVGStopElement","className"],["style\t: CSSStyleDeclaration SVGStopElement","style"],["offset\t: SVGAnimatedNumber SVGStopElement","offset"]]}

@@ -1,0 +1,706 @@
+{
+	"folder_history":
+	[
+		"/home/deivid/Documentos/FakeGamejam/Fake_gamejam/Assets/Scripts",
+		"/opt/lampp/htdocs/pcw_practicas",
+		"/home/deivid/Documentos/PracticasSD",
+		"/home/deivid/Documentos"
+	],
+	"last_version": 3211,
+	"last_window_id": 8,
+	"log_indexing": false,
+	"settings":
+	{
+		"new_window_height": 1056.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"env",
+						"envioGateway"
+					],
+					[
+						"arra",
+						"arrayestados"
+					],
+					[
+						"clien",
+						"clientAddress"
+					],
+					[
+						"div",
+						"divModal"
+					],
+					[
+						"getEl",
+						"getElementById\t( elementId: DOMString ): Element Document"
+					],
+					[
+						"getE",
+						"getElementById\t( elementId: DOMString ): Element Document"
+					],
+					[
+						"todos",
+						"todosDivModal"
+					],
+					[
+						"cons",
+						"console_log"
+					],
+					[
+						"query",
+						"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+					],
+					[
+						"main",
+						"mainModal"
+					],
+					[
+						"append",
+						"appendChild\t( node: Node ): Node Node"
+					],
+					[
+						"let",
+						"mdi-chevron-left-circle-outline:"
+					],
+					[
+						"s",
+						"st-icon-adn"
+					]
+				]
+			},
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"mat",
+						"Activate Materialize Theme"
+					],
+					[
+						"mate",
+						"Activate Materialize Theme"
+					],
+					[
+						"mater",
+						"Activate Materialize Theme"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"packa",
+						"Install Package Control"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/deivid/Documentos/PracticasSD/FormHtml/form.html",
+				"/home/deivid/Documentos/PracticasSD/MyHTTPServer.py",
+				"/home/deivid/Documentos/PracticasSD/Config.txt",
+				"/home/deivid/Documentos/PracticasSD/Procesador.py",
+				"/home/deivid/Documentos/PracticasSD/gatewaySD.py",
+				"/opt/lampp/htdocs/pcw_practicas/login.html",
+				"/opt/lampp/htdocs/pcw_practicas/registro.html",
+				"/opt/lampp/htdocs/pcw_practicas/buscar.html",
+				"/opt/lampp/htdocs/pcw_practicas/nuevo.html",
+				"/opt/lampp/htdocs/pcw_practicas/css/nuevo.css",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/login.js",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/registro.js",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/nuevo.js",
+				"/tmp/xa-AQNOI0/CasaLego.txt",
+				"/opt/lampp/htdocs/pcw_practicas/css/registro.css",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/buscar.js",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/articulo.js",
+				"/opt/lampp/htdocs/pcw_practicas/css/login.css",
+				"/opt/lampp/htdocs/pcw_practicas/grid.html",
+				"/home/deivid/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+				"/home/deivid/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap"
+			],
+			"find":
+			{
+				"height": 70.0
+			},
+			"find_in_files":
+			{
+				"height": 158.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"print",
+					"\\n",
+					":\\",
+					"CONSO",
+					"ses",
+					"SES",
+					"();\n",
+					"botonMOd",
+					"ventana",
+					"ventana modal",
+					"toggle"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 25.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 1920.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"i",
+						"inputZ"
+					],
+					[
+						"inp",
+						"inputX"
+					],
+					[
+						"marg",
+						"margin-bottom\tproperty"
+					],
+					[
+						"mar",
+						"margin\tproperty"
+					],
+					[
+						"env",
+						"envioGateway"
+					],
+					[
+						"arra",
+						"arrayestados"
+					],
+					[
+						"clien",
+						"clientAddress"
+					],
+					[
+						"div",
+						"divModal"
+					],
+					[
+						"getEl",
+						"getElementById\t( elementId: DOMString ): Element Document"
+					],
+					[
+						"getE",
+						"getElementById\t( elementId: DOMString ): Element Document"
+					],
+					[
+						"todos",
+						"todosDivModal"
+					],
+					[
+						"cons",
+						"console_log"
+					],
+					[
+						"query",
+						"querySelector\t( selectors: DOMString ): Element (Selectors) Element"
+					],
+					[
+						"main",
+						"mainModal"
+					],
+					[
+						"append",
+						"appendChild\t( node: Node ): Node Node"
+					],
+					[
+						"let",
+						"mdi-chevron-left-circle-outline:"
+					],
+					[
+						"s",
+						"st-icon-adn"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/opt/lampp/htdocs/pcw_practicas/JavaScript/articulo.js",
+					"settings":
+					{
+						"buffer_size": 15907,
+						"encoding": "UTF-8",
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+					[
+						"remove",
+						"Package Control: Remove Package"
+					],
+					[
+						"inst",
+						"Package Control: Install Package"
+					],
+					[
+						"ins",
+						"Package Control: Install Package"
+					],
+					[
+						"insta",
+						"Package Control: Install Package"
+					],
+					[
+						"mat",
+						"Activate Materialize Theme"
+					],
+					[
+						"mate",
+						"Activate Materialize Theme"
+					],
+					[
+						"mater",
+						"Activate Materialize Theme"
+					],
+					[
+						"instal",
+						"Package Control: Install Package"
+					],
+					[
+						"packa",
+						"Install Package Control"
+					]
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/home/deivid/Documentos",
+				"/opt/lampp/htdocs/pcw_practicas",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript"
+			],
+			"file_history":
+			[
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/articulo.js",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/nuevo.js",
+				"/home/deivid/Documentos/FakeGamejam/Fake_gamejam/Assets/Scripts/FirstPersonMovement/FirstChMovement.cs",
+				"/home/deivid/Documentos/PracticasSD/Procesador.py",
+				"/home/deivid/Documentos/FakeGamejam/Fake_gamejam/Assets/Scripts/2DMovement/Controller2D.cs",
+				"/home/deivid/Documentos/PracticasSD/gatewaySD.py",
+				"/home/deivid/Documentos/PracticasSD/MyHTTPServer.py",
+				"/home/deivid/Documentos/FakeGamejam/Fake_gamejam/Assets/Scripts/PlayerController.cs",
+				"/home/deivid/Documentos/FakeGamejam/Fake_gamejam/Assets/Scripts/2DMovement/2DController.cs",
+				"/opt/lampp/htdocs/pcw_practicas/nuevo.html",
+				"/opt/lampp/htdocs/pcw_practicas/css/nuevo.css",
+				"/opt/lampp/htdocs/pcw_practicas/css/main.css",
+				"/opt/lampp/htdocs/pcw_practicas/registro.html",
+				"/opt/lampp/htdocs/pcw_practicas/css/index.css",
+				"/home/deivid/Documentos/PracticasSD/FormHtml/form.html",
+				"/home/deivid/Documentos/PracticasSD/Config.txt",
+				"/opt/lampp/htdocs/pcw_practicas/login.html",
+				"/opt/lampp/htdocs/pcw_practicas/buscar.html",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/login.js",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/registro.js",
+				"/tmp/xa-AQNOI0/CasaLego.txt",
+				"/opt/lampp/htdocs/pcw_practicas/css/registro.css",
+				"/opt/lampp/htdocs/pcw_practicas/JavaScript/buscar.js",
+				"/opt/lampp/htdocs/pcw_practicas/css/login.css",
+				"/opt/lampp/htdocs/pcw_practicas/grid.html",
+				"/home/deivid/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+				"/home/deivid/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap"
+			],
+			"find":
+			{
+				"height": 70.0
+			},
+			"find_in_files":
+			{
+				"height": 158.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"hacerN",
+					"print",
+					"\\n",
+					":\\",
+					"CONSO",
+					"ses",
+					"SES",
+					"();\n",
+					"botonMOd",
+					"ventana",
+					"ventana modal",
+					"toggle"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"folders":
+			[
+				{
+					"path": "/home/deivid/Documentos"
+				},
+				{
+					"path": "/opt/lampp/htdocs/pcw_practicas"
+				}
+			],
+			"groups":
+			[
+				{
+					"selected": 0,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/opt/lampp/htdocs/pcw_practicas/JavaScript/articulo.js",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 15907,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"bracket_highlighter.busy": false,
+									"bracket_highlighter.locations":
+									{
+										"close":
+										{
+										},
+										"icon":
+										{
+										},
+										"open":
+										{
+										},
+										"unmatched":
+										{
+										}
+									},
+									"bracket_highlighter.regions":
+									[
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content"
+									],
+									"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 4246.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 25.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"pinned_build_system": "",
+			"position": "0,0,0,0,0,0,0,1920,1056,1920,1080",
+			"project": "",
+			"replace":
+			{
+				"height": 46.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"selected_group": 0,
+			"settings":
+			{
+			},
+			"show_minimap": false,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			},
+			"window_id": 2,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

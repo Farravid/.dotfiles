@@ -1,0 +1,9 @@
+{
+	"color_scheme": "Packages/Materialize/schemes/Material Flatland.tmTheme",
+	"font_size": 9,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"theme": "Material Flatland.sublime-theme"
+}

@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["getChannelData\t( channel: unsigned long ): Float32Array AudioBuffer","getChannelData(${1:channel: unsigned long})"],["numberOfChannels\t: long AudioBuffer","numberOfChannels"],["sampleRate\t: float AudioBuffer","sampleRate"],["duration\t: double AudioBuffer","duration"],["length\t: long AudioBuffer","length"]]}

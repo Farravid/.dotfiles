@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["matrixTransform\t( matrix: SVGMatrix ): SVGPoint SVGPoint","matrixTransform(${1:matrix: SVGMatrix})"],["x\t: float SVGPoint","x"],["y\t: float SVGPoint","y"]]}

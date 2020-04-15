@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["Comment\t( data?: DOMString ): Comment Comment","new Comment(${1:data?: DOMString})"],["Comment\t( data?: DOMString ): Comment Comment","Comment(${1:data?: DOMString})"]]}

@@ -1,0 +1,15 @@
+{
+  "install": "changelog/install.txt",
+  "2.6.5": "changelog/2.6.5.txt",
+  "2.6.6": "changelog/2.6.6.txt",
+  "2.6.7": "changelog/2.6.7.txt",
+  "2.6.8": "changelog/2.6.8.txt",
+  "2.6.81": "changelog/2.6.81.txt",
+  "2.6.93": "changelog/2.6.93.txt",
+  "2.6.94": "changelog/2.6.94.txt",
+  "2.6.95": "changelog/2.6.95.txt",
+  "2.6.96": "changelog/2.6.96.txt",
+  "2.6.97": "changelog/2.6.97.txt",
+  "2.6.98": "changelog/2.6.98.txt",
+  "2.6.99": "changelog/2.6.99.txt"
+}

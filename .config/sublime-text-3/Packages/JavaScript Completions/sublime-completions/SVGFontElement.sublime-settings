@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["getPresentationAttribute\t( name: DOMString ): CSSValue SVGFontElement","getPresentationAttribute(${1:name: DOMString})"],["externalResourcesRequired\t: SVGAnimatedBoolean SVGFontElement","externalResourcesRequired"],["className\t: SVGAnimatedString SVGFontElement","className"],["style\t: CSSStyleDeclaration SVGFontElement","style"]]}

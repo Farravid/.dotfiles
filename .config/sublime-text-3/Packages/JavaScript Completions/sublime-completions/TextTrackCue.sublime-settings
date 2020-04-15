@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["onenter\t: EventHandler TextTrackCue","onenter"],["onexit\t: EventHandler TextTrackCue","onexit"],["pauseOnExit\t: boolean TextTrackCue","pauseOnExit"],["startTime\t: double TextTrackCue","startTime"],["track\t: TextTrack TextTrackCue","track"],["endTime\t: double TextTrackCue","endTime"],["id\t: DOMString TextTrackCue","id"]]}

@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["previousTranslate\t: SVGPoint SVGZoomEvent","previousTranslate"],["zoomRectScreen\t: SVGRect SVGZoomEvent","zoomRectScreen"],["newTranslate\t: SVGPoint SVGZoomEvent","newTranslate"],["previousScale\t: float SVGZoomEvent","previousScale"],["newScale\t: float SVGZoomEvent","newScale"]]}

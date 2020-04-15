@@ -1,0 +1,1 @@
+{"scope":"source.js","completions":[["handleEvent\t( event: Event ): void EventListener","handleEvent(${1:event: Event})"]]}

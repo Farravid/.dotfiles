@@ -1,0 +1,28 @@
+[
+  {
+    "keys": ["super+alt+c"],
+    "command": "find_description"
+  },
+  {
+    "keys": ["super+alt+s"],
+    "command": "evaluate_javascript",
+    "args": {"eval_type": "eval"}
+  },
+  {
+    "keys": ["super+alt+z"],
+    "command": "evaluate_javascript",
+    "args": {"is_line": "True", "eval_type": "eval"}
+  },
+  {
+    "keys": ["super+alt+h"],
+    "command": "hide_code_highlights_eval"
+  },
+  {
+    "keys": ["super+alt+j"],
+    "command": "show_code_highlights_eval"
+  },
+  {
+    "keys": ["super+alt+w"],
+    "command": "can_i_use"
+  }
+]
