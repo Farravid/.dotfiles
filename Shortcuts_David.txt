@@ -1,0 +1,32 @@
+ATAJOS DE TECLADO -> MANJARO-I3 DAVID MARTINEZ
+
+
+Todos los atajos de teclado de el WM i3 lo teneis en la carpeta homeen la carpeta oculta .i3/config -> ls -a para ver las carpetas ocultas
+
+Estos son los que mas utiles he encontrado y los que mas uso.
+A parte de todo esto podeis modificarlos a vuestro antojo en el archivo config previamente mencionado
+
+Partiendo de que la tecla "mod" es la Super tecla de vuestro ordenador que normalmente es la tecla Windows, que cabronazo windows si teneis teclado mecánico cambiadla joder.
+
+
+-Abrir terminal -> mod+enter
+-Abrir buscador -> mod+w
+-Abrir spotify -> mod+m
+-Abrir discord -> mod+l
+-Abrir gestor de archivos -> mod+e
+-Abrir sublime text-> mod+p (a 0, de usar vim)
+-Abrir ranger (gestor de archivos por terminal) -> mod+a (puede petar)
+-Cerrar ventana actual -> mod+q
+-Ejecución comandos rapidos sin temrinal -> mod+d
+-Mover ventanas en el mismo escritorio -> mod+Shift+arrow_keys 
+(Tambien esta la opcion de moverlas con hjkl como vim)
+-Mover ventanas entre escritorios -> mod+Shift+1,mod+Shift+2...
+-Opciones de apagado,reboot y demas -> mod+0
+-Bloquear sesión -> mod+9
+-Moverse entre escritorios -> mod+1,mod+2,mod+3....hasta mod+8
+-Moverse entre ventanas -> mod+arrow_keys (o como vim)
+-Maximizar ventana seleccionada -> mod+f
+-Splitear ventanas -> mod+Shift+x (es decir que no se solapen sean todas visibles)
+-Stackear ventanas -> mod+s (lo contrario de splitear)
+
+
