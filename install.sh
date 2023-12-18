@@ -21,5 +21,13 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg neovim
 # install_pckg alacritty
 # install_pckg neofetch
+# install_pckg nitrogen
 
-printf "${Purple}|.|.|.|.|.| TODO |.|.|.|.|.|${NC}\n"
+printf "${Purple}|.|.|.|.|.| Changing default shell to ${Blue}ZSH${Purple} |.|.|.|.|.|${NC}\n"
+chsh -s /usr/bin/zsh
+
+printf "${Purple}|.|.|.|.|.| Installing ohmyzsh |.|.|.|.|.|${NC}\n"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
