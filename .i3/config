@@ -391,7 +391,8 @@ mode "$mode_gaps_outer" {
 ##########################
 
 # Floating terminal
-bindsym $mod+Shift+Return exec alacritty --class=floating --hold -e neofetch 
+bindsym $mod+Shift+Return exec alacritty --class=floating
+
 ## Rofi
 bindsym $mod+d exec rofi -show
 ## Nautilus (File explorer)
@@ -407,10 +408,13 @@ bindsym $mod+Shift+s exec flameshot gui
 exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching polybar
 exec_always --no-startup-id polybar
-## Launching startup terminal with neofetch
-exec_always alacritty --hold -e neofetch --class=floating
+## Launching startup terminal with setup selector
+exec_always alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
 
 ##########################
 ## Rules ##
 ##########################
 for_window [class="floating"] floating enable
+for_window [class="startup_terminal"] floating enable
+for_window [class="startup_terminal"] move position 2100 100
+for_window [class="startup_terminal"] resize set 900 900
