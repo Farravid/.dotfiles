@@ -9,6 +9,18 @@ function install_pckg()
 
 }
 
+function uninstall_pckg()
+{
+    printf "=== Uninstalling ${Blue}$1${NC} ===\n"
+    yay -Rcns $1
+
+}
+
+printf "${Purple}|.|.|.|.|.| TODO Symlinlk |.|.|.|.|.|${NC}\n"
+
+printf "${Purple}|.|.|.|.|.| Unistaling unnecessary software |.|.|.|.|.|${NC}\n"
+# uninstall_pckg palemoon
+
 printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 
 # install_pckg rofi
@@ -22,12 +34,27 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg alacritty
 # install_pckg neofetch
 # install_pckg nitrogen
+# install_pckg discord
+# install_pckg obsidian 
+# install_pckg tmux
+# install_pckg polybar
+# install_pckg cava
+# install_pckg blueman
 
 printf "${Purple}|.|.|.|.|.| Changing default shell to ${Blue}ZSH${Purple} |.|.|.|.|.|${NC}\n"
-chsh -s /usr/bin/zsh
+#chsh -s /usr/bin/zsh
 
-printf "${Purple}|.|.|.|.|.| Installing ohmyzsh |.|.|.|.|.|${NC}\n"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+printf "${Purple}|.|.|.|.|.| Installing ohmyzsh and nerd fonts |.|.|.|.|.|${NC}\n"
+#sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+#git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# install_pckg ttf-cascadia-code-nerd
+
+printf "${Purple}|.|.|.|.|.| Installing C++ stuff |.|.|.|.|.|${NC}\n"
+# install_pckg premake
+
+printf "${Purple}|.|.|.|.|.| Changing wallpaper |.|.|.|.|.|${NC}\n"
+nitrogen --set-auto ./assets/wallpaper2.jpg
+
+printf "${Purple}|.|.|.|.|.| TODO: Copy paste config to home except README, install etc  |.|.|.|.|.|${NC}\n"
 
