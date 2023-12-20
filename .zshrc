@@ -111,4 +111,4 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias re-zsh="source ~/.zshrc"
-alias dotfiles="cd ~/dotfiles && tree -a -I .git"
+alias dotfiles="cd ~/dotfiles && ls -a"
