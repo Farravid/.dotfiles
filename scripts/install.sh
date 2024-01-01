@@ -16,12 +16,17 @@ function uninstall_pckg()
 
 }
 
+printf "${Purple}|.|.|.|.|.| Updating the system |.|.|.|.|.|${NC}\n"
+# yay -Syu
+
 printf "${Purple}|.|.|.|.|.| TODO Symlinlk |.|.|.|.|.|${NC}\n"
 
 printf "${Purple}|.|.|.|.|.| Unistaling unnecessary software |.|.|.|.|.|${NC}\n"
 # uninstall_pckg palemoon
+# uninstall_pckg volumeicon
 
-printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
+printf "${Purple}|.|.|.|.|.| Installing package dependencies |
+.|.|.|.|.|${NC}\n"
 
 # install_pckg rofi
 # install_pckg nautilus
@@ -29,7 +34,6 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg git-lfs
 # install_pckg github-desktop
 # install_pckg google-chrome
-# install_pckg spotify
 # install_pckg visual-studio-code-bin
 # install_pckg flameshot
 # install_pckg neovim
@@ -40,9 +44,16 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg obsidian 
 # install_pckg tmux
 # install_pckg polybar
-# install_pckg cava
 # install_pckg blueman
 # install_pckg appimagelauncher
+
+printf "${Purple}|||||| Installing music/sound package dependencies ||||||${NC}\n"
+
+# install_pckg pulseaudio
+# install_pckg spotify
+# install_pckg cava
+# install_pckg pavucontrol
+# install_pckg playerctl
 
 printf "${Purple}|.|.|.|.|.| Changing default shell to ${Blue}ZSH${Purple} |.|.|.|.|.|${NC}\n"
 #chsh -s /usr/bin/zsh
