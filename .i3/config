@@ -41,8 +41,8 @@ bindsym $mod+z exec --no-startup-id morc_menu
 
 exec --no-startup-id volumeicon
 bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
+# exec --no-startup-id pulseaudio
+# exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
@@ -391,12 +391,12 @@ mode "$mode_gaps_outer" {
 ##########################
 
 # Floating terminal
-bindsym $mod+Shift+Return exec alacritty --class=floating
+bindsym $mod+Shift+Return exec alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
 
 ## Rofi
 bindsym $mod+d exec rofi -show
 ## Nautilus (File explorer)
-bindsym $mod+e exec nautilus
+bindsym $mod+e exec rofi -show filebrowser
 ## Flameshot (Screenshots)
 bindsym $mod+Shift+s exec flameshot gui
 
@@ -407,9 +407,9 @@ bindsym $mod+Shift+s exec flameshot gui
 ## Resolution 
 exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching polybar
-exec_always --no-startup-id polybar
+exec --no-startup-id polybar
 ## Launching startup terminal with setup selector
-exec_always alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
+exec alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
 
 ##########################
 ## Rules ##

@@ -26,6 +26,8 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg rofi
 # install_pckg nautilus
 # install_pckg github-cli
+# install_pckg git-lfs
+# install_pckg github-desktop
 # install_pckg google-chrome
 # install_pckg spotify
 # install_pckg visual-studio-code-bin
@@ -40,6 +42,7 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |.|.|.|.|.|${NC}\n"
 # install_pckg polybar
 # install_pckg cava
 # install_pckg blueman
+# install_pckg appimagelauncher
 
 printf "${Purple}|.|.|.|.|.| Changing default shell to ${Blue}ZSH${Purple} |.|.|.|.|.|${NC}\n"
 #chsh -s /usr/bin/zsh
@@ -53,8 +56,11 @@ printf "${Purple}|.|.|.|.|.| Installing ohmyzsh and nerd fonts |.|.|.|.|.|${NC}\
 printf "${Purple}|.|.|.|.|.| Installing C++ stuff |.|.|.|.|.|${NC}\n"
 # install_pckg premake
 
+printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n"
+# ttps://github.com/Dygmalab/Bazecor/releases/download/v1.3.9/Bazecor-1.3.9-x64.AppImage
+
 printf "${Purple}|.|.|.|.|.| Changing wallpaper |.|.|.|.|.|${NC}\n"
-nitrogen --set-auto ./assets/wallpaper2.jpg
+# nitrogen --set-auto ~/dotfiles/assets/wallpaper2.jpg
 
 printf "${Purple}|.|.|.|.|.| TODO: Copy paste config to home except README, install etc  |.|.|.|.|.|${NC}\n"
 
