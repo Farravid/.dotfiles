@@ -4,3 +4,6 @@
 [submodule ".config/neofetch/themes"]
 	path = .config/neofetch/themes
 	url = https://github.com/Chick2D/neofetch-themes.git
+[submodule ".config/polybar/plugins/spotify"]
+	path = .config/polybar/plugins/spotify
+	url = https://github.com/Jvanrhijn/polybar-spotify.git
