@@ -55,7 +55,7 @@ def main():
     options = [
         inquirer.List('choice',
                       message="Select a setup to display:",
-                      choices = ["C++", "Godot"]
+                      choices = ["C++", "Godot", "None"]
                       )
     ]
 

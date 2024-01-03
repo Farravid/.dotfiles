@@ -2,7 +2,7 @@
 
 configuration {
     show-icons:true;
-    modes: [combi, drun, filebrowser];
+    modes: [combi, drun];
     terminal: "alacritty";
     background-color:#003642;
 }

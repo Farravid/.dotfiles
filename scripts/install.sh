@@ -46,6 +46,7 @@ printf "${Purple}|.|.|.|.|.| Installing package dependencies |
 # install_pckg polybar
 # install_pckg blueman
 # install_pckg appimagelauncher
+# install_pckg fsearch
 
 printf "${Purple}|||||| Installing music/sound package dependencies ||||||${NC}\n"
 
