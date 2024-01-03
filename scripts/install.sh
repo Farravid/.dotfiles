@@ -67,7 +67,10 @@ printf "${Purple}|.|.|.|.|.| Installing ohmyzsh and nerd fonts |.|.|.|.|.|${NC}\
 printf "${Purple}|.|.|.|.|.| Installing C++ stuff |.|.|.|.|.|${NC}\n"
 # install_pckg premake
 
-printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n"
+printf "${Purple}|.|.|.|.|.| Installing Python stuff |.|.|.|.|.|${NC}\n"
+# install_pckg python-inquirer
+
+printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n" TODO
 # ttps://github.com/Dygmalab/Bazecor/releases/download/v1.3.9/Bazecor-1.3.9-x64.AppImage
 
 printf "${Purple}|.|.|.|.|.| Changing wallpaper |.|.|.|.|.|${NC}\n"

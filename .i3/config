@@ -391,10 +391,10 @@ mode "$mode_gaps_outer" {
 ##########################
 
 # Floating terminal
-bindsym $mod+Shift+Return exec alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
+bindsym $mod+Shift+Return exec alacritty --class=floating
 
 ## Rofi
-bindsym $mod+d exec rofi -show
+bindsym $mod+d exec rofi -show drun
 ## Nautilus (File explorer)
 bindsym $mod+e exec rofi -show filebrowser
 ## Flameshot (Screenshots)
@@ -417,7 +417,7 @@ exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching polybar
 exec --no-startup-id polybar
 ## Launching startup terminal with setup selector
-exec alacritty --class=startup_terminal -e ~/dotfiles/scripts/setup_selector.sh
+exec alacritty --class=startup_terminal -e python ~/dotfiles/scripts/setup_selector.py
 
 ##########################
 ## Rules ##
