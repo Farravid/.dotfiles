@@ -16,7 +16,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 2
+bindsym $mod+y border pixel 3
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -27,7 +27,7 @@ font xft:CaskaydiaCove Nerd Font 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -270,7 +270,6 @@ mode "resize" {
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 # exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
@@ -315,15 +314,19 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
-# Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #FFFFFF #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color2 #f0f0f0
+set_from_resource $cbg i3wm.color7 #f0f0f0
 
-  client.background       #2B2C2B
+# Theme colors
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $bg       $cbg
+client.focused_inactive $bg     $bg     $fg  $bg       $bg
+client.unfocused        $bg     $bg     $fg  $bg       $bg
+client.urgent           $bg     $bg     $fg  $bg       $bg
+client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+client.background       $bg
 
 #############################
 ### settings for i3-gaps: ###
@@ -391,7 +394,7 @@ mode "$mode_gaps_outer" {
 ##########################
 
 # Floating terminal
-bindsym $mod+Shift+Return exec alacritty --class=floating
+bindsym $mod+Shift+Return exec kitty --class=startup_terminal
 
 ## Rofi
 bindsym $mod+d exec rofi -show drun
@@ -414,10 +417,12 @@ bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@
 
 ## Resolution 
 exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
-## Launching polybar
-exec --no-startup-id polybar
+## Launching pywal and polybar
+exec_always --no-startup-id "wal -R && polybar"
 ## Launching startup terminal with setup selector
-exec alacritty --class=startup_terminal -e python ~/dotfiles/scripts/setup_selector.py
+exec kitty --class=startup_terminal -e python ~/dotfiles/scripts/setup_selector.py
+## Restoring wallpaper (always after pywal)
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 
 ##########################
 ## Rules ##

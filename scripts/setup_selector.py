@@ -8,17 +8,8 @@ Purple = '\033[0;35m'
 NC = '\033[0m'
 
 def display_decorator():
-    print("")
-    print("███████╗ █████╗ ██████╗ ██████╗  █████╗ ██╗   ██╗██╗██████╗ ")
-    print("██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║   ██║██║██╔══██╗")
-    print("█████╗  ███████║██████╔╝██████╔╝███████║██║   ██║██║██║  ██║")
-    print("██╔══╝  ██╔══██║██╔══██╗██╔══██╗██╔══██║╚██╗ ██╔╝██║██║  ██║")
-    print("██║     ██║  ██║██║  ██║██║  ██║██║  ██║ ╚████╔╝ ██║██████╔╝")
-    print("╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  ╚═╝╚═════╝ ")
-    print("")
-    print("")
-    subprocess.Popen("neofetch", shell=True)
-    time.sleep(0.1)
+    subprocess.Popen("neofetch --config ~/dotfiles/.config/neofetch/small_config.conf", shell=True)
+    time.sleep(0.5)
     print("")
     print("== Default apps ==")
     print("[WS1] Terminal")
@@ -37,19 +28,19 @@ def launch_app(command, app_name, time_to_sleep = 0.0, workspace = ""):
         subprocess.Popen(f"i3-msg 'move container to workspace {workspace}'", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 def launch_default_apps():
-    launch_app("alacritty", "Blank Alacritty")
-    launch_app("google-chrome-stable", "Google Chrome", 1, "2:Notes")
-    launch_app("spotify", "Spotify", 1, "3:Media")
+    launch_app("kitty", "Blank Kitty")
+    launch_app("google-chrome-stable", "Google Chrome", 2, "2:Notes")
+    launch_app("spotify", "Spotify", 2, "3:Media")
     launch_app("discord", "Discord", 5, "3:Media")
-    launch_app("alacritty --hold -e cava", "Cava", 0.5, "3:Media")
+    launch_app("kitty --hold -e cava", "Cava", 1, "3:Media")
 
 def launch_c_setup():
     print("Performing Action 1")
     # Add your logic for Action 1 here
 
 def launch_godot_setup():
+    launch_app("cd ~/Documents/GitHub/ProjectoAmador && scripts/linux/launch_godot_editor.sh", "Godot", 1)
     launch_app("github-desktop", "Github Desktop", 1, "2:Notes")
-    launch_app("cd ~/Documents/GitHub/ProjectoAmador && scripts/linux/launch_godot_editor.sh", "Godot")
 
 def main():
     options = [

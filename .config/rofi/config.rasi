@@ -1,9 +1,14 @@
-@theme "~/dotfiles/.config/rofi/selected-theme.rasi"
+
+@import "~/.cache/wal/colors-rofi-dark"
+
+window{
+    width:30%;
+}
 
 configuration {
     show-icons:true;
+    font: "JetBrainsMono Nerd Font Bold 15";
     modes: [combi, drun];
     terminal: "alacritty";
-    background-color:#003642;
 }
 

@@ -1,3 +1,7 @@
+# TODO: We should move this to a python script to select and check the diferent packages
+
+# background maker: colorkit
+
 Blue='\033[0;34m'
 Purple='\033[0;35m'
 NC='\033[0m' # No Color
@@ -70,6 +74,8 @@ printf "${Purple}|.|.|.|.|.| Installing C++ stuff |.|.|.|.|.|${NC}\n"
 
 printf "${Purple}|.|.|.|.|.| Installing Python stuff |.|.|.|.|.|${NC}\n"
 # install_pckg python-inquirer
+# install_pckg python-pywal
+# install_pckg colorz
 
 printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n" TODO
 # ttps://github.com/Dygmalab/Bazecor/releases/download/v1.3.9/Bazecor-1.3.9-x64.AppImage
