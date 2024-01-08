@@ -1,5 +1,4 @@
 import subprocess
-import time
 import inquirer
 import os
 from enum import Enum
@@ -12,12 +11,28 @@ class PackageAction(Enum):
     install=" -S "
     remove=" -Rcns "
 
-def install_required_pck():
-    pass
+def is_pckg_installed(package_name) -> bool:
+    result = subprocess.run("yay -Qi " + package_name, shell=True, capture_output=True, text=True)
+    return not result.returncode
 
-def perform_optional_pck_actions(action : PackageAction, names : [str]):
+def is_pckg_update_or_install_needed(package_name) -> bool:
+    if not is_pckg_installed(package_name): return True
+
+    result = subprocess.run("yay -Qu " + package_name, shell=True, capture_output=True, text=True)
+    return not result.returncode
+
+def perform_required_pckg_action(action : PackageAction, names : [str]):
+    for name in names:
+        command= "yay" + str(action.value) + name
+        subprocess.run(command, shell=True)
+
+def perform_optional_pckg_actions(action : PackageAction, names : [str]):
     for name in names:
         
+        if action == PackageAction.remove and not is_pckg_installed(name): continue
+        if action == PackageAction.install and not is_pckg_update_or_install_needed(name): continue
+
+        print("\n")
         message = 'Do you want to ' + action.name + ' ' + Purple + name + NC + ' ?'
         question = [
             inquirer.List(
@@ -27,9 +42,9 @@ def perform_optional_pck_actions(action : PackageAction, names : [str]):
 
         answer = inquirer.prompt(question)
 
-        #if answer["choice"] == "Yes":
-            #command= "yay" + str(action.value) + name
-            #subprocess.run(command)
+        if answer["choice"] == "Yes":
+            perform_required_pckg_action(action, [name])
+            
 
 def create_sym_links(symlink_files : [str]):
     for slf in symlink_files:
@@ -50,16 +65,16 @@ def create_sym_links(symlink_files : [str]):
 
 
 def main():
-    create_sym_links([".config/kitty/kitty.conf",
-                      ".config/neofetch/config.conf",
-                      ".config/polybar/config.ini",
-                      ".config/rofi/config.rasi",
-                      ".config/picom.conf",
-                      ".i3",
-                       ".gitconfig", ".profile", ".zshrc"])
+    #create_sym_links([".config/kitty/kitty.conf",
+    #                  ".config/neofetch/config.conf",
+    #                  ".config/polybar/config.ini",
+    #                  ".config/rofi/config.rasi",
+    #                  ".config/picom.conf",
+    #                  ".i3",
+    #                   ".gitconfig", ".profile", ".zshrc"])
 
-#   perform_optional_pck_actions(PackageAction.install, ["fsearch", "obsidian", "discord"])
-#   perform_optional_pck_actions(PackageAction.remove, ["palemoon", "volumeicon"])
+    perform_optional_pckg_actions(PackageAction.install, ["fsearch", "premake", "obsidian", "discord"])
+    perform_optional_pckg_actions(PackageAction.remove, ["premake"])
 
 
 if __name__ == "__main__":

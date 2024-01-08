@@ -82,6 +82,3 @@ printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n"
 
 printf "${Purple}|.|.|.|.|.| Changing wallpaper |.|.|.|.|.|${NC}\n"
 # nitrogen --set-auto ~/dotfiles/assets/wallpaper2.jpg
-
-printf "${Purple}|.|.|.|.|.| TODO: Copy paste config to home except README, install etc  |.|.|.|.|.|${NC}\n"
-
