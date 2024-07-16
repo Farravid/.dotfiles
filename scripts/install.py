@@ -58,6 +58,7 @@ def create_sym_links(symlink_files : [str]):
         if system_file_path.is_file():
             os.remove(system_file_path)
         else:
+            print("Hey")
             path_parent_folder = system_file_path.parent
             if not path_parent_folder.is_dir(): os.mkdir(path_parent_folder)
         
@@ -65,16 +66,20 @@ def create_sym_links(symlink_files : [str]):
 
 
 def main():
-    #create_sym_links([".config/kitty/kitty.conf",
-    #                  ".config/neofetch/config.conf",
-    #                  ".config/polybar/config.ini",
-    #                  ".config/rofi/config.rasi",
-    #                  ".config/picom.conf",
-    #                  ".i3",
-    #                   ".gitconfig", ".profile", ".zshrc"])
+    create_sym_links([  ".config/kitty/kitty.conf",
+                        ".config/neofetch/config.conf",
+                        ".config/polybar/config.ini",
+                        ".config/rofi/config.rasi",
+                        ".config/picom.conf",
+                        ".i3/config",
+                        ".gitconfig", 
+                        ".profile",
+                        ".zshrc",
+                        ".p10k.zsh"
+                    ])
 
-    perform_optional_pckg_actions(PackageAction.install, ["fsearch", "premake", "obsidian", "discord"])
-    perform_optional_pckg_actions(PackageAction.remove, ["premake"])
+    perform_optional_pckg_actions(PackageAction.install, ["fsearch", "obsidian", "discord"])
+    perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])
 
 
 if __name__ == "__main__":
