@@ -123,6 +123,12 @@ alias godot="cd ~/Documents/GitHub/ProjectoAmador && ls"
 alias godot-launch="godot && sudo scripts/linux/launch_godot_editor.sh"
 alias kernels="mhwd-kernel -li"
 alias v="nvim"
+
+###########################
+###### GITHUB REPOS #######
+###########################
+alias perf-ninja="cd ~/Documents/GitHub/perf-ninja && ls"
+alias build-perf-ninja="~/Documents/GitHub/perf-ninja/build.sh"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

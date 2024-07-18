@@ -58,7 +58,6 @@ def create_sym_links(symlink_files : [str]):
         if system_file_path.is_file():
             os.remove(system_file_path)
         else:
-            print("Hey")
             path_parent_folder = system_file_path.parent
             if not path_parent_folder.is_dir(): os.mkdir(path_parent_folder)
         
@@ -70,6 +69,7 @@ def main():
                         ".config/neofetch/config.conf",
                         ".config/polybar/config.ini",
                         ".config/rofi/config.rasi",
+                        ".config/waypaper/config.ini",
                         ".config/picom.conf",
                         ".i3/config",
                         ".gitconfig", 
@@ -78,8 +78,8 @@ def main():
                         ".p10k.zsh"
                     ])
 
-    perform_optional_pckg_actions(PackageAction.install, ["fsearch", "obsidian", "discord"])
-    perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])
+    #perform_optional_pckg_actions(PackageAction.install, ["fsearch", "obsidian", "discord", "hotspot"])
+    #perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])
 
 
 if __name__ == "__main__":

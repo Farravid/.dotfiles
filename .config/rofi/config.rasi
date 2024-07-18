@@ -9,6 +9,6 @@ configuration {
     show-icons:true;
     font: "JetBrainsMono Nerd Font Bold 15";
     modes: [combi, drun];
-    terminal: "alacritty";
+    terminal: "kitty";
 }
 

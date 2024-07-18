@@ -401,7 +401,7 @@ bindsym $mod+d exec rofi -show drun
 ## Fsearch (File explorer)
 bindsym $mod+e exec fsearch --class=floating
 ## Flameshot (Screenshots)
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+p exec flameshot gui
 ## Audios contols
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
