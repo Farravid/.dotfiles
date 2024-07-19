@@ -396,10 +396,8 @@ mode "$mode_gaps_outer" {
 # Floating terminal
 bindsym $mod+Shift+Return exec kitty --class=startup_terminal
 
-## Rofi
-## bindsym $mod+d exec rofi -show drun
-## Fsearch (File explorer)
-bindsym $mod+e exec fsearch --class=floating
+## Nautilus
+bindsym $mod+e exec nautilus
 ## Flameshot (Screenshots)
 bindsym $mod+p exec flameshot gui
 ## Audios contols
@@ -422,7 +420,9 @@ exec_always --no-startup-id "~/my-env/bin/wal -R && polybar"
 ## Launching startup terminal with setup selector
 exec kitty --class=startup_terminal -e python3 ~/dotfiles/scripts/setup_selector.py
 ## Restoring wallpaper (always after pywal)
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id nitrogen --restore; sleep 1;
+## Exec picom
+exec_always picom -b
 
 ##########################
 ## Rules ##

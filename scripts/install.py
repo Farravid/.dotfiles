@@ -62,7 +62,7 @@ def main():
 
     #TODO: Install picom, kitty, ulauncher, zsh, zsh-theme10k, Meslo NGfont for 10k theme
 
-    #perform_optional_pckg_actions(PackageAction.install, ["fsearch", "obsidian", "discord", "hotspot"])
+    #perform_optional_pckg_actions(PackageAction.install, ["obsidian", "discord", "hotspot"])
     #perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])
 
 
