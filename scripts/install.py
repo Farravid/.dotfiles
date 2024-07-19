@@ -37,7 +37,6 @@ def create_sym_links(symlink_files : [str]):
         assert dotfiles_file_path.is_file() or dotfiles_file_path.is_dir(), "Trying to symlink an invalid dotfiles file/folder!"
 
         if system_file_path.is_file():
-            print("Hey")
             os.remove(system_file_path)
         else:
             path_parent_folder = system_file_path.parent
@@ -50,7 +49,6 @@ def main():
     create_sym_links([  ".config/kitty/kitty.conf",
                         ".config/neofetch/config.conf",
                         ".config/polybar/config.ini",
-                        ".config/rofi/config.rasi",
                         ".config/waypaper/config.ini",
                         ".config/picom.conf",
                         ".config/i3/config",
