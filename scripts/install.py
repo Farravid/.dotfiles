@@ -1,5 +1,5 @@
 import subprocess
-import inquirer
+#import inquirer
 import os
 from enum import Enum
 from pathlib import Path
@@ -25,25 +25,6 @@ def perform_required_pckg_action(action : PackageAction, names : [str]):
     for name in names:
         command= "yay" + str(action.value) + name
         subprocess.run(command, shell=True)
-
-def perform_optional_pckg_actions(action : PackageAction, names : [str]):
-    for name in names:
-        
-        if action == PackageAction.remove and not is_pckg_installed(name): continue
-        if action == PackageAction.install and not is_pckg_update_or_install_needed(name): continue
-
-        print("\n")
-        message = 'Do you want to ' + action.name + ' ' + Purple + name + NC + ' ?'
-        question = [
-            inquirer.List(
-                "choice", message,["Yes", "No"],
-            ),
-        ]
-
-        answer = inquirer.prompt(question)
-
-        if answer["choice"] == "Yes":
-            perform_required_pckg_action(action, [name])
             
 
 def create_sym_links(symlink_files : [str]):
@@ -56,6 +37,7 @@ def create_sym_links(symlink_files : [str]):
         assert dotfiles_file_path.is_file() or dotfiles_file_path.is_dir(), "Trying to symlink an invalid dotfiles file/folder!"
 
         if system_file_path.is_file():
+            print("Hey")
             os.remove(system_file_path)
         else:
             path_parent_folder = system_file_path.parent
@@ -71,12 +53,14 @@ def main():
                         ".config/rofi/config.rasi",
                         ".config/waypaper/config.ini",
                         ".config/picom.conf",
-                        ".i3/config",
+                        ".config/i3/config",
                         ".gitconfig", 
                         ".profile",
                         ".zshrc",
                         ".p10k.zsh"
                     ])
+
+    #TODO: Install picom, kitty, ulauncher, zsh, zsh-theme10k, Meslo NGfont for 10k theme
 
     #perform_optional_pckg_actions(PackageAction.install, ["fsearch", "obsidian", "discord", "hotspot"])
     #perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])
