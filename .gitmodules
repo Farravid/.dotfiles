@@ -1,6 +1,3 @@
-[submodule ".config/rofi/themes"]
-	path = .config/rofi/themes
-	url = https://github.com/newmanls/rofi-themes-collection.git
 [submodule ".config/neofetch/themes"]
 	path = .config/neofetch/themes
 	url = https://github.com/Chick2D/neofetch-themes.git
