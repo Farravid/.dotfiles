@@ -32,7 +32,7 @@ def create_sym_links(symlink_files : [str]):
         print("Symlinking " + Purple + slf + NC + " file")
 
         system_file_path = Path(os.path.expanduser('~/' + slf))
-        dotfiles_file_path = Path(os.path.expanduser('~/dotfiles/' + slf))
+        dotfiles_file_path = Path(os.path.expanduser('~/.dotfiles/' + slf))
 
         assert dotfiles_file_path.is_file() or dotfiles_file_path.is_dir(), "Trying to symlink an invalid dotfiles file/folder!"
 
@@ -51,14 +51,14 @@ def main():
                         ".config/polybar/config.ini",
                         ".config/waypaper/config.ini",
                         ".config/picom.conf",
-                        ".config/i3/config",
+                        ".i3/config",
                         ".gitconfig", 
                         ".profile",
                         ".zshrc",
                         ".p10k.zsh"
                     ])
 
-    #TODO: Install picom, kitty, ulauncher, zsh, zsh-theme10k, Meslo NGfont for 10k theme
+    #TODO: Install, kitty, ulauncher, zsh, zsh-theme10k, Meslo NGfont for 10k theme
 
     #perform_optional_pckg_actions(PackageAction.install, ["obsidian", "discord", "hotspot"])
     #perform_optional_pckg_actions(PackageAction.remove, ["palemoon, volumeicon"])

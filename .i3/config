@@ -138,10 +138,10 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:Code
-set $ws2 2:Notes
-set $ws3 3:Media
-set $ws4 4:Additional
+set $ws1 1:
+set $ws2 2:
+set $ws3 3:
+set $ws4 4:
 set $ws5 5:
 set $ws6 6:
 set $ws7 7:
@@ -225,21 +225,21 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set shut down, restart and locking features
-# bindsym $mod+0 mode "$mode_system"
-# set $mode_system (l) 󰌾, (e) 󰗼, (s) 󰤄, (r) 󰑖, (Shift+s) 
-# mode "$mode_system" {
-#    bindsym l exec --no-startup-id i3exit lock, mode "default"
-#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-#    bindsym e exec --no-startup-id i3exit logout, mode "default"
-#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+bindsym $mod+0 mode "$mode_system"
+set $mode_system (l) 󰌾, (e) 󰗼, (s) 󰤄, (r) 󰑖, (Shift+s) 
+mode "$mode_system" {
+   bindsym l exec --no-startup-id i3exit lock, mode "default"
+   bindsym s exec --no-startup-id i3exit suspend, mode "default"
+   bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+   bindsym e exec --no-startup-id i3exit logout, mode "default"
+   bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+   bindsym r exec --no-startup-id i3exit reboot, mode "default"
+   bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
-#    # exit system mode: "Enter" or "Escape"
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-## }
+   # exit system mode: "Enter" or "Escape"
+   bindsym Return mode "default"
+   bindsym Escape mode "default"
+}
 
 # Resize window (you can also use the mouse for that)
 bindsym $mod+r mode "resize"
@@ -396,6 +396,8 @@ mode "$mode_gaps_outer" {
 # Floating terminal
 bindsym $mod+Shift+Return exec kitty --class=startup_terminal
 
+## Ulauncher
+bindsym $mod+d exec ulauncher-toggle
 ## Nautilus
 bindsym $mod+e exec nautilus
 ## Flameshot (Screenshots)
@@ -416,13 +418,13 @@ bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@
 ## Resolution 
 exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching pywal and polybar
-exec_always --no-startup-id "~/my-env/bin/wal -R && polybar"
+exec_always --no-startup-id "wal -R && polybar"
 ## Launching startup terminal with setup selector
-exec kitty --class=startup_terminal -e python3 ~/dotfiles/scripts/setup_selector.py
+exec kitty --class=startup_terminal -e python ~/dotfiles/scripts/setup_selector.py
 ## Restoring wallpaper (always after pywal)
-exec --no-startup-id nitrogen --restore; sleep 1;
-## Exec picom
-exec_always picom -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+## Launching ulauncher
+exec_always --no-startup-id ulauncher
 
 ##########################
 ## Rules ##

@@ -50,6 +50,8 @@ install_pckg polybar
 install_pckg blueman
 #install_pckg appimagelauncher
 install_pckg fsearch
+#install_pckg python2
+# add no confirm
 
 printf "${Purple}|||||| Installing music/sound package dependencies ||||||${NC}\n"
 
@@ -64,6 +66,7 @@ chsh -s /usr/bin/zsh
 
 printf "${Purple}|.|.|.|.|.| Installing ohmyzsh and nerd fonts |.|.|.|.|.|${NC}\n"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 install_pckg ttf-jetbrains-mono-nerd
@@ -80,4 +83,4 @@ printf "${Purple}|.|.|.|.|.| Installing Dygma keyboard stuff |.|.|.|.|.|${NC}\n"
 # ttps://github.com/Dygmalab/Bazecor/releases/download/v1.3.9/Bazecor-1.3.9-x64.AppImage
 
 printf "${Purple}|.|.|.|.|.| Changing wallpaper |.|.|.|.|.|${NC}\n"
-nitrogen --set-auto ~/dotfiles/assets/wallpaper2.jpg
+nitrogen --set-auto ~/.dotfiles/assets/tower.jpg

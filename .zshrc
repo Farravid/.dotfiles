@@ -116,7 +116,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias re-zsh="source ~/.zshrc"
-alias dotfiles="cd ~/dotfiles && ls -a"
+alias dotfiles="cd ~/.dotfiles && ls -a"
 alias godot="cd ~/Documents/GitHub/ProjectoAmador && ls"
 alias godot-launch="godot && sudo scripts/linux/launch_godot_editor.sh"
 alias kernels="mhwd-kernel -li"
