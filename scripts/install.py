@@ -147,11 +147,11 @@ def main():
     ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝                                                                                                                           
     """)
 
-    #uninstall_packages()
-    #install_packages()
-    #install_oh_my_zsh()
-    #reload_zsh()
-    #install_code_extensions()
+    uninstall_packages()
+    install_packages()
+    install_oh_my_zsh()
+    reload_zsh()
+    install_code_extensions()
 
     print(Purple + "\n=== Symlinking files ===" + NC)
     create_sym_links([  ".config/kitty/kitty.conf",
@@ -172,12 +172,12 @@ def main():
                     ])
     
     print(Purple + "\n=== Copy ulauncher extensions to .config/ulauncher folder ===" + NC)
-    #subprocess.run("cp -r ~/.dotfiles/.config/ulauncher/ext_preferences ~/.config/ulauncher", shell=True)
+    subprocess.run("cp -r ~/.dotfiles/.config/ulauncher/ext_preferences ~/.config/ulauncher", shell=True)
 
     reload_zsh()
     
     print(Purple + "\n=== Select a random wallpaper from dotfiles and applying pywal ===" + NC)
-    #subprocess.run("waypaper --random", shell=True)
+    subprocess.run("waypaper --random", shell=True)
 
 if __name__ == "__main__":
     main()
@@ -188,4 +188,4 @@ if __name__ == "__main__":
 # TODO: Oh my zsh stopping the execution
 # TODO: Prepare installation with .sh automatic to avoid pre install stuff
 # TODO: Install and learn tmux
-# TODO: Change audio output with command
+# TODO: Install intel advisor as optional
