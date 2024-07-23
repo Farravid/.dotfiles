@@ -108,6 +108,7 @@ def install_packages():
          "google-chrome", "neofetch", "feh", "waypaper",
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
+         "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto"
     ])
 
     print(Purple + "=== Installing optional software for this dotfiles ===" + NC)
