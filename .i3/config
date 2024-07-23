@@ -398,8 +398,8 @@ bindsym $mod+Shift+Return exec kitty --class=startup_terminal
 
 ## Ulauncher
 bindsym $mod+d exec ulauncher-toggle
-## Nautilus
-bindsym $mod+e exec nautilus
+## File explorer
+bindsym $mod+e exec pcmanfm
 ## Flameshot (Screenshots)
 bindsym $mod+p exec flameshot gui
 ## Audios contols
@@ -420,7 +420,7 @@ exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching pywal and polybar
 exec_always --no-startup-id "wal -R && polybar"
 ## Launching startup terminal with setup selector
-exec kitty --class=startup_terminal -e python ~/dotfiles/scripts/setup_selector.py
+exec kitty --class=startup_terminal -e python ~/.dotfiles/scripts/setup_selector.py
 ## Restoring wallpaper (always after pywal)
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 ## Launching ulauncher

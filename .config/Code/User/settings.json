@@ -1,0 +1,18 @@
+{
+    "editor.fontFamily": "MesloLGS NF",
+    "workbench.colorTheme": "Theme Darker",
+    "glassit.alpha": 240,
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on",
+    "workbench.iconTheme": "icons",
+    "tabnine.experimentalAutoImports": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "security.allowedUNCHosts": [
+        "wsl.localhost"
+    ],
+}
