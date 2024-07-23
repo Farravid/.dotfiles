@@ -1,6 +1,6 @@
 {
     "editor.fontFamily": "JetBrainsMono NFM",
-    "workbench.colorTheme": "Theme Darker",
+    "workbench.colorTheme": "Wal",
     "glassit.alpha": 240,
     "editor.fontSize": 14,
     "editor.wordWrap": "on",
@@ -15,4 +15,5 @@
     "security.allowedUNCHosts": [
         "wsl.localhost"
     ],
+    "window.menuBarVisibility": "toggle",
 }

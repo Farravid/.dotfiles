@@ -115,7 +115,7 @@ def install_packages():
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
          "fsearch", "nautilus", "hotspot", "appimagelauncher",
-         "cava",                                                        g
+         "cava", "pipes.sh", "bottom", "obs-studio",                                                        
     ])
 
     print(Purple + "=== Installing useful C++ software for this dotfiles ===" + NC)
@@ -187,3 +187,5 @@ if __name__ == "__main__":
 # TODO: GTK Themes with themix-gui
 # TODO: Oh my zsh stopping the execution
 # TODO: Prepare installation with .sh automatic to avoid pre install stuff
+# TODO: Install and learn tmux
+# TODO: Change audio output with command
