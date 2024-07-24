@@ -1,16 +1,14 @@
 import subprocess
 import inquirer
-import os
 from enum import Enum
-from pathlib import Path
 
-Purple = '\033[0;35m'
-NC = '\033[0m'
+import common
 
 #########################################################################
 #########################################################################
 
 class PackageAction(Enum):
+    clone_git       = " git clone "
     install_code    = " code --install-extension "
     install_yay     = " yay -S --noconfirm "
     remove_yay      = " yay -Rcns "
@@ -43,7 +41,7 @@ def perform_optional_pckg_actions(action : PackageAction, names : [str]):
     for name in names:
 
         print("\n")
-        message = 'Do you want to ' + action.name + ' ' + Purple + name + NC + ' ?'
+        message = 'Do you want to ' + action.name + ' ' + common.Purple + name + common.NC + ' ?'
         question = [
             inquirer.List(
                 "choice", message,["Yes", "No"],
@@ -56,25 +54,6 @@ def perform_optional_pckg_actions(action : PackageAction, names : [str]):
             if action == PackageAction.remove_yay and not is_pckg_installed(name): continue
             if action == PackageAction.install_yay and not is_pckg_update_or_install_needed(name): continue
             perform_required_pckg_action(action, [name])
-            
-#########################################################################
-
-def create_sym_links(symlink_files : [str]):
-    for slf in symlink_files:
-        print("Symlinking " + Purple + slf + NC + " file")
-
-        system_file_path = Path(os.path.expanduser('~/' + slf))
-        dotfiles_file_path = Path(os.path.expanduser('~/.dotfiles/' + slf))
-
-        assert dotfiles_file_path.is_file() or dotfiles_file_path.is_dir(), "Trying to symlink an invalid dotfiles file/folder!"
-
-        if system_file_path.is_file():
-            os.remove(system_file_path)
-        else:
-            path_parent_folder = system_file_path.parent
-            if not path_parent_folder.is_dir(): os.mkdir(path_parent_folder)
-
-        os.symlink(dotfiles_file_path, system_file_path)
 
 #########################################################################
 
@@ -84,7 +63,7 @@ def reload_zsh():
 #########################################################################
 
 def install_oh_my_zsh():
-    print(Purple + "== Installing oh my zsh ===" + NC)
+    print(common.Purple + "== Installing oh my zsh ===" + common.NC)
     #subprocess.run("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"", shell=True)
     subprocess.run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k", shell=True)
     subprocess.run("git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting", shell=True)
@@ -93,13 +72,13 @@ def install_oh_my_zsh():
 #########################################################################
 
 def uninstall_packages():
-    print(Purple + "=== Removing not used software from Manjaro i3 😎 ===" + NC)
+    print(common.Purple + "=== Removing not used software from Manjaro i3 😎 ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.remove_yay, ["palemoon", "volumeicon"])
 
 #########################################################################
 
 def install_packages():
-    print(Purple + "=== Installing necessary software for this dotfiles ===" + NC)
+    print(common.Purple + "=== Installing necessary software for this dotfiles ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.install_yay,
     [   
          "kitty", "ulauncher", "flameshot", "polybar",
@@ -108,17 +87,18 @@ def install_packages():
          "google-chrome", "neofetch", "feh", "waypaper",
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
-         "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto"
+         "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto",
+         "tmux",
     ])
 
-    print(Purple + "=== Installing optional software for this dotfiles ===" + NC)
+    print(common.Purple + "=== Installing optional software for this dotfiles ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
-         "fsearch", "nautilus", "hotspot", "appimagelauncher",
-         "cava", "pipes.sh", "bottom", "obs-studio",                                                        
+         "fsearch", "hotspot", "appimagelauncher",
+         "cli-visualizer", "pipes.sh", "bottom", "obs-studio", "benchmark",                                                     
     ])
 
-    print(Purple + "=== Installing useful C++ software for this dotfiles ===" + NC)
+    print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
          "clang", "cmake", "ccache",                                                      
@@ -137,6 +117,27 @@ def install_code_extensions():
 
 #########################################################################
 
+def clone_repos():
+    print(common.Purple + "\n=== Cloning frequently used GitHub repositories ===" + common.NC)
+
+    github_folder = "~/Documents/GitHub"
+    subprocess.run("mkdir " + github_folder, shell=True)
+
+    perform_optional_pckg_actions(PackageAction.clone_git, 
+    [
+        "--recurse-submodules https://github.com/Farravid/obsidian-vault.git " + github_folder + "/obsidian-vault",
+        "https://github.com/Farravid/farra_function " + github_folder + "/farra_function",
+        "-b private/farravid https://github.com/dendibakh/perf-ninja.git " + github_folder + "/perf-ninja",                                  
+    ])
+
+#########################################################################
+
+def select_random_wallpaper():
+    print(common.Purple + "\n=== Select a random wallpaper from dotfiles and applying pywal ===" + common.NC)
+    subprocess.run("waypaper --random", shell=True)
+
+#########################################################################
+
 def main():
     print(r"""
     ██████╗  ██████╗ ████████╗███████╗██╗██╗     ███████╗███████╗
@@ -146,46 +147,30 @@ def main():
     ██████╔╝╚██████╔╝   ██║   ██║     ██║███████╗███████╗███████║
     ╚═════╝  ╚═════╝    ╚═╝   ╚═╝     ╚═╝╚══════╝╚══════╝╚══════╝                                                                                                                           
     """)
-
+    
     uninstall_packages()
     install_packages()
     install_oh_my_zsh()
     reload_zsh()
     install_code_extensions()
 
-    print(Purple + "\n=== Symlinking files ===" + NC)
-    create_sym_links([  ".config/kitty/kitty.conf",
-                        ".config/neofetch/config.conf",
-                        ".config/polybar/config.ini",
-                        ".config/waypaper/config.ini",
-                        ".config/picom.conf",
-                        ".config/ulauncher/extensions.json",
-                        ".config/ulauncher/settings.json",
-                        ".config/ulauncher/shortcuts.json",
-                        ".config/Code/User/settings.json",
-                        ".config/Code/User/keybindings.json",
-                        ".i3/config",
-                        ".gitconfig", 
-                        ".profile",
-                        ".zshrc",
-                        ".p10k.zsh"
-                    ])
+    common.perform_sym_links()
     
-    print(Purple + "\n=== Copy ulauncher extensions to .config/ulauncher folder ===" + NC)
+    print(common.Purple + "\n=== Copy ulauncher extensions to .config/ulauncher folder ===" + common.NC)
     subprocess.run("cp -r ~/.dotfiles/.config/ulauncher/ext_preferences ~/.config/ulauncher", shell=True)
 
     reload_zsh()
-    
-    print(Purple + "\n=== Select a random wallpaper from dotfiles and applying pywal ===" + NC)
-    subprocess.run("waypaper --random", shell=True)
+    clone_repos()
+    select_random_wallpaper()    
 
 if __name__ == "__main__":
     main()
 
-# TODO: Create update script instead of re-running install
 # TODO: Find a solution for extensions of ulauncher
 # TODO: GTK Themes with themix-gui
 # TODO: Oh my zsh stopping the execution
-# TODO: Prepare installation with .sh automatic to avoid pre install stuff
-# TODO: Install and learn tmux
+# TODO: Learn and config tmux
 # TODO: Install intel advisor as optional
+# TODO: Pywal cli-visualizer
+# TODO: Get setup_selector ready at least for some stuff
+# TODO: Create rules for apps for specific worksapces

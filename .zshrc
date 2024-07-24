@@ -24,7 +24,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-ZSH_THEME_RANDOM_CANDIDATES=( "cloud" "jonathan" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "cloud" "jonathan" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -120,6 +120,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias re-zsh="source ~/.zshrc"
 alias dotfiles="cd ~/.dotfiles && ls -a"
+alias update-dotfiles="python ~/.dotfiles/scripts/update.py"
 alias kernels="mhwd-kernel -li"
 alias v="nvim"
 
