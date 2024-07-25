@@ -93,9 +93,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 ## Launching tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   exec tmux
+# fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -124,6 +124,7 @@ alias update-dotfiles="python ~/.dotfiles/scripts/update.py"
 alias kernels="mhwd-kernel -li"
 alias v="nvim"
 alias check-i3-class="xprop | grep WM_CLASS | awk '{ print $4 }'"
+alias intel-advisor="~/intel/oneapi/advisor/2024.2/bin64/advisor-gui &"
 
 ###########################
 ###### GITHUB REPOS #######

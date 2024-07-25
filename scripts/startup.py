@@ -2,6 +2,8 @@
 
 import subprocess
 import time
+import os
+import signal
 import inquirer
 
 Purple = '\033[0;35m'
@@ -13,40 +15,36 @@ def display_decorator():
     print("")
     print("== Default apps ==")
     print("[WS1] Terminal")
-    print("[WS2] Google Chrome")
+    print("[WS2] Firefox")
     print("[WS3] Spotify, Discord")
     print("")
 
 
-def launch_app(command, app_name, time_to_sleep = 0.0, workspace = ""):
+def launch_app(command, app_name):
     print(f"{Purple} == Launching {app_name} == {NC}")
     subprocess.Popen(command, shell=True, start_new_session=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    
-    time.sleep(time_to_sleep)
-
-    if(workspace):
-        subprocess.Popen(f"i3-msg 'move container to workspace {workspace}'", shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 def launch_default_apps():
     launch_app("kitty", "Blank Kitty")
-    launch_app("google-chrome-stable", "Google Chrome", 2, "2:Notes")
-    launch_app("spotify", "Spotify", 2, "3:Media")
-    launch_app("discord", "Discord", 5, "3:Media")
-    launch_app("kitty --hold -e cava", "Cava", 1, "3:Media")
+    time.sleep(0.2)
+    launch_app("firefox", "Firefox")
+    launch_app("spotify", "Spotify")
+    launch_app("discord", "Discord")
 
-def launch_c_setup():
-    print("Performing Action 1")
-    # Add your logic for Action 1 here
+def launch_perf_ninja():
+    launch_app("code ~/Documents/GitHub/perf-ninja", "Perf ninja in VSCode")
+    launch_app("obsidian", "Obsidian")
+    launch_app("github-desktop", "Github Desktop")
 
-def launch_godot_setup():
-    launch_app("cd ~/Documents/GitHub/ProjectoAmador && scripts/linux/launch_godot_editor.sh", "Godot", 1)
-    launch_app("github-desktop", "Github Desktop", 1, "2:Notes")
+def launch_dotfiles():
+    launch_app("code ~/.dotfiles", "Perf ninja in VSCode")
+    launch_app("github-desktop", "Github Desktop")
 
 def main():
     options = [
         inquirer.List('choice',
                       message="Select a setup to display:",
-                      choices = ["C++", "Godot", "None"]
+                      choices = ["perf-ninja", "dotfiles", "None"]
                       )
     ]
 
@@ -56,8 +54,8 @@ def main():
     if(show_default_apps): launch_default_apps()
 
     match answer['choice']:
-        case 'C++'  : launch_c_setup()
-        case 'Godot': launch_godot_setup()
+        case 'perf-ninja'   : launch_perf_ninja()
+        case 'dotfiles'     : launch_dotfiles()
 
 if __name__ == "__main__":
     display_decorator()

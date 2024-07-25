@@ -84,7 +84,7 @@ def install_packages():
          "kitty", "ulauncher", "flameshot", "polybar",
          "neofetch", "blueman", "neovim", "github-cli",
          "git-lfs", "github-desktop", "discord", "obsidian",
-         "google-chrome", "neofetch", "feh", "waypaper",
+         "firefox", "python-pywalfox", "neofetch", "feh", "waypaper",
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
          "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto",
@@ -103,6 +103,12 @@ def install_packages():
     [  
          "clang", "cmake", "ccache", "gdb",                                                      
     ])
+
+#########################################################################
+
+def install_pywalfox():
+    print(common.Purple + "\n=== Installing pywalfox. Remember to download the addon on Firefox ===" + common.NC)
+    subprocess.run("sudo -E pywalfox install", shell=True)
 
 #########################################################################
 
@@ -152,6 +158,7 @@ def main():
     install_packages()
     install_oh_my_zsh()
     reload_zsh()
+    install_pywalfox()
     install_code_extensions()
 
     common.perform_sym_links()
@@ -172,5 +179,4 @@ if __name__ == "__main__":
 # TODO: Learn and config tmux
 # TODO: Install intel advisor as optional
 # TODO: Pywal cli-visualizer
-# TODO: Get setup_selector ready at least for some stuff
 # TODO: Tilling direction on polybar?
