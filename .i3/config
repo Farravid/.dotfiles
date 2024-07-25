@@ -423,12 +423,12 @@ bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@
 exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching pywal and polybar
 exec_always --no-startup-id "wal -R && polybar"
-## Launching startup terminal with setup selector
-exec kitty --class=startup_terminal -e python ~/.dotfiles/scripts/setup_selector.py
 ## Restoring wallpaper (always after pywal)
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 ## Launching ulauncher
 exec_always --no-startup-id ulauncher
+## Launching startup terminal with setup selector
+exec kitty --class=startup_terminal -e python ~/.dotfiles/scripts/startup.py
 
 ##########################
 ## Rules ##
@@ -437,3 +437,14 @@ for_window [class="floating"] floating enable
 for_window [class="startup_terminal"] floating enable
 for_window [class="startup_terminal"] move position 2100 100
 for_window [class="startup_terminal"] resize set 900 900
+
+##########################
+## Application specific workspaces ##
+##########################
+# Open applications on specific workspaces
+assign [class="Code"] $ws1
+assign [class="obsidian"] $ws2
+assign [class="Google-chrome"] $ws2
+assign [class="Slack"] $ws2
+assign [class="Spotify"] $ws3
+assign [class="discord"] $ws3

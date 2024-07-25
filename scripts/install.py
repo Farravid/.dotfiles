@@ -101,7 +101,7 @@ def install_packages():
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
-         "clang", "cmake", "ccache",                                                      
+         "clang", "cmake", "ccache", "gdb",                                                      
     ])
 
 #########################################################################
@@ -173,4 +173,4 @@ if __name__ == "__main__":
 # TODO: Install intel advisor as optional
 # TODO: Pywal cli-visualizer
 # TODO: Get setup_selector ready at least for some stuff
-# TODO: Create rules for apps for specific worksapces
+# TODO: Tilling direction on polybar?

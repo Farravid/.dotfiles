@@ -123,6 +123,7 @@ alias dotfiles="cd ~/.dotfiles && ls -a"
 alias update-dotfiles="python ~/.dotfiles/scripts/update.py"
 alias kernels="mhwd-kernel -li"
 alias v="nvim"
+alias check-i3-class="xprop | grep WM_CLASS | awk '{ print $4 }'"
 
 ###########################
 ###### GITHUB REPOS #######
