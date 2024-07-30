@@ -1,6 +1,5 @@
 {
     "editor.fontFamily": "JetBrainsMono NFM",
-    "workbench.colorTheme": "Theme Darker",
     "glassit.alpha": 240,
     "editor.fontSize": 14,
     "editor.wordWrap": "on",
@@ -17,4 +16,10 @@
     ],
     "window.menuBarVisibility": "toggle",
     "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "Theme Darker",
+    "C_Cpp.default.cppStandard": "c++23",
+    "C_Cpp.default.cStandard": "c23",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "mesonbuild.downloadLanguageServer": true,
+    "cmake.showOptionsMovedNotification": false,
 }

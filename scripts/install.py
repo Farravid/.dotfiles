@@ -101,7 +101,8 @@ def install_packages():
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
-         "clang", "cmake", "ccache", "gdb",                                                      
+         "clang", "cmake", "ccache", "gdb",
+         "conan",                                                      
     ])
 
 #########################################################################
@@ -118,7 +119,8 @@ def install_code_extensions():
         "ms-vscode.cpptools", "s-nlf-fh.glassit", "tal7aouy.icons",
         "ms-python.vscode-pylance", "ms-python.python", "ms-python.debugpy",
         "tal7aouy.theme", "dlasagno.wal-theme", "naumovs.color-highlight",
-        "eamodio.gitlens", "yzhang.markdown-all-in-one",                              
+        "eamodio.gitlens", "yzhang.markdown-all-in-one",
+        "ms-vscode.cmake-tools", "twxs.cmake", "aaron-bond.better-comments",                          
     ])
 
 #########################################################################
