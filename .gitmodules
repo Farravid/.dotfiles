@@ -4,6 +4,3 @@
 [submodule ".config/polybar/plugins/spotify"]
 	path = .config/polybar/plugins/spotify
 	url = https://github.com/Jvanrhijn/polybar-spotify.git
-[submodule "spicetify/themes"]
-	path = spicetify/themes
-	url = https://github.com/spicetify/spicetify-themes.git
