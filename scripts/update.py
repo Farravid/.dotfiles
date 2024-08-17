@@ -15,6 +15,12 @@ def update_code_extensions():
 
 #########################################################################
 
+def update_spicetify():
+    print(common.Purple + "\n=== Update spicetify ===" + common.NC)
+    subprocess.run("spicetify update", shell=True)
+
+#########################################################################
+
 
 def main():
     print(r"""

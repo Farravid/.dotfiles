@@ -79,7 +79,7 @@ def uninstall_packages():
 
 def install_packages():
     print(common.Purple + "=== Installing necessary software for this dotfiles ===" + common.NC)
-    perform_optional_pckg_actions(PackageAction.install_yay,
+    perform_required_pckg_action(PackageAction.install_yay,
     [   
          "kitty", "ulauncher", "flameshot", "polybar",
          "neofetch", "blueman", "neovim", "github-cli",
@@ -104,6 +104,17 @@ def install_packages():
          "clang", "cmake", "ccache", "gdb",
          "conan",                                                      
     ])
+
+#########################################################################
+
+def install_spicetify():
+    print(common.Purple + "=== Installing spicetify ===" + common.NC)
+    perform_required_pckg_action(PackageAction.install_yay,
+    [   
+         "spicetify-cli", "spicetify-themes-git",
+    ])
+    subprocess.run("sudo chmod a+wr /opt/spotify", shell=True)
+    subprocess.run("sudo chmod a+wr /opt/spotify/Apps -R", shell=True)
 
 #########################################################################
 
@@ -158,6 +169,7 @@ def main():
     
     uninstall_packages()
     install_packages()
+    install_spicetify()
     install_oh_my_zsh()
     reload_zsh()
     install_pywalfox()

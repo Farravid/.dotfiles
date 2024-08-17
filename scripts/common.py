@@ -37,6 +37,7 @@ def perform_sym_links():
                         ".config/ulauncher/shortcuts.json",
                         ".config/Code/User/settings.json",
                         ".config/Code/User/keybindings.json",
+                        ".config/spicetify/config-xpui.ini",
                         ".i3/config",
                         ".gitconfig", 
                         ".profile",
