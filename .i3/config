@@ -441,12 +441,14 @@ for_window [class="startup_terminal"] resize set 900 900
 ##########################
 # Open applications on specific workspaces
 assign [class="Code"] $ws1
+assign [class="okular"] $ws1
 assign [class="obsidian"] $ws2
 #assign [class="firefox"] $ws2
-assign [class="Slack"] $ws4
 assign [class="GitHub Desktop"] $ws2
 assign [class="Spotify"] $ws3
 assign [class="discord"] $ws3
+assign [class="Slack"] $ws4
+
 
 ##########################
 ## Border colors ##

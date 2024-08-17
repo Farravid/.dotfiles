@@ -44,11 +44,17 @@ def launch_interval_map():
     launch_app("obsidian", "Obsidian")
     launch_app("github-desktop", "Github Desktop")
 
+def launch_multithreading():
+    launch_app("code ~/Documents/GitHub/multithreading", "Multithreading C++")
+    launch_app("obsidian", "Obsidian")
+    launch_app("github-desktop", "Github Desktop")
+    launch_app("okular ~/Documents/GitHub/obsidian-vault/Books/C++\ Concurrency\ in\ Action.pdf", "Okular")
+
 def main():
     options = [
         inquirer.List('choice',
                       message="Select a setup to display:",
-                      choices = ["perf-ninja", "dotfiles", "interval_map", "None"]
+                      choices = ["perf-ninja", "dotfiles", "interval_map", "multithreading", "None"]
                       )
     ]
 
@@ -61,6 +67,7 @@ def main():
         case 'perf-ninja'   : launch_perf_ninja()
         case 'dotfiles'     : launch_dotfiles()
         case 'interval_map' : launch_interval_map()
+        case 'multithreading' : launch_multithreading()
 
 if __name__ == "__main__":
     display_decorator()

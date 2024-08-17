@@ -179,6 +179,7 @@ if __name__ == "__main__":
 # TODO: GTK Themes with themix-gui
 # TODO: Oh my zsh stopping the execution
 # TODO: Learn and config tmux
+# TODO: Spicetify
 # TODO: Install intel advisor as optional
 # TODO: Pywal cli-visualizer
 # TODO: Tilling direction on polybar?
