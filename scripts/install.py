@@ -95,7 +95,8 @@ def install_packages():
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
          "fsearch", "hotspot", "appimagelauncher",
-         "cli-visualizer", "pipes.sh", "bottom", "obs-studio", "benchmark",                                                     
+         "cli-visualizer", "pipes.sh", "bottom", "obs-studio", "benchmark",
+         "okular",                                                     
     ])
 
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
