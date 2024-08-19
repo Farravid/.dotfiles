@@ -64,7 +64,7 @@ def reload_zsh():
 
 def install_oh_my_zsh():
     print(common.Purple + "== Installing oh my zsh ===" + common.NC)
-    #subprocess.run("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\"", shell=True)
+    subprocess.run("sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended", shell=True)
     subprocess.run("git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k", shell=True)
     subprocess.run("git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting", shell=True)
     subprocess.run("git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions", shell=True)
@@ -116,6 +116,7 @@ def install_spicetify():
     ])
     subprocess.run("sudo chmod a+wr /opt/spotify", shell=True)
     subprocess.run("sudo chmod a+wr /opt/spotify/Apps -R", shell=True)
+    subprocess.run("spicetify backup apply", shell=True)
 
 #########################################################################
 
@@ -187,13 +188,11 @@ def main():
     select_random_wallpaper()    
 
 if __name__ == "__main__":
-    main()
+    #main()
+    install_oh_my_zsh()
 
-# TODO: Find a solution for extensions of ulauncher
-# TODO: GTK Themes with themix-gui
-# TODO: Oh my zsh stopping the execution
 # TODO: Learn and config tmux
 # TODO: Spicetify
+# TODO: Fix blueetoth
 # TODO: Install intel advisor as optional
-# TODO: Pywal cli-visualizer
 # TODO: Tilling direction on polybar?
