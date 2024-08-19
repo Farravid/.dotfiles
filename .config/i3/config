@@ -395,15 +395,15 @@ bindsym $mod+Shift+Return exec kitty --class=startup_terminal
 ## Ulauncher
 bindsym $mod+d exec ulauncher-toggle
 ## File explorer
-bindsym $mod+e exec pcmanfm
+bindsym $mod+e exec thunar
 ## Flameshot (Screenshots)
 bindsym $mod+p exec flameshot gui
 ## Firefox
 bindsym $mod+Shift+g exec firefox
 
 ## Change output sound device
-bindsym $mod+a exec pacmd set-default-sink 0  #Speaker
-bindsym $mod+Shift+a exec pacmd set-default-sink 1  #Headset
+bindsym $mod+a exec pactl set-default-sink alsa_output.pci-0000_01_00.1.hdmi-stereo  #Speaker
+bindsym $mod+Shift+a exec pactl set-default-sink alsa_output.usb-SteelSeries_Arctis_Nova_Pro_Wireless-00.analog-stereo  #Headset
 ## Audios contols
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
@@ -422,7 +422,7 @@ exec_always --no-startup-id xrandr --output DP-0 --mode 5120x1440
 ## Launching pywal and polybar
 exec_always --no-startup-id "wal -R && polybar"
 ## Restoring wallpaper (always after pywal)
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id sleep 1; picom -b
 ## Launching ulauncher
 exec_always --no-startup-id ulauncher
 ## Launching startup terminal with setup selector

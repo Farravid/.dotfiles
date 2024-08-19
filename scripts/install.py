@@ -81,14 +81,14 @@ def install_packages():
     print(common.Purple + "=== Installing necessary software for this dotfiles ===" + common.NC)
     perform_required_pckg_action(PackageAction.install_yay,
     [   
-         "kitty", "ulauncher", "flameshot", "polybar",
+         "zsh", "kitty", "ulauncher", "flameshot", "polybar",
          "neofetch", "blueman", "neovim", "github-cli",
          "git-lfs", "github-desktop", "discord", "obsidian",
          "firefox", "python-pywalfox", "neofetch", "feh", "waypaper",
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
          "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto",
-         "tmux",
+         "tmux", "i3exit",
     ])
 
     print(common.Purple + "=== Installing optional software for this dotfiles ===" + common.NC)
@@ -96,7 +96,7 @@ def install_packages():
     [  
          "fsearch", "hotspot", "appimagelauncher",
          "cli-visualizer", "pipes.sh", "bottom", "obs-studio", "benchmark",
-         "okular",                                                     
+         "okular", "slack-desktop",                                                     
     ])
 
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
@@ -146,8 +146,9 @@ def clone_repos():
     perform_optional_pckg_actions(PackageAction.clone_git, 
     [
         "--recurse-submodules https://github.com/Farravid/obsidian-vault.git " + github_folder + "/obsidian-vault",
-        "https://github.com/Farravid/farra_function " + github_folder + "/farra_function",
+        "https://github.com/Farravid/farra_constexpr" + github_folder + "/farra_constexpr",
         "-b private/farravid https://github.com/dendibakh/perf-ninja.git " + github_folder + "/perf-ninja",                                  
+
     ])
 
 #########################################################################
