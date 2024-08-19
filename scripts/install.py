@@ -188,8 +188,7 @@ def main():
     select_random_wallpaper()    
 
 if __name__ == "__main__":
-    #main()
-    install_oh_my_zsh()
+    main()
 
 # TODO: Learn and config tmux
 # TODO: Spicetify
