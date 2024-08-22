@@ -11,7 +11,7 @@ class PackageAction(Enum):
     clone_git       = " git clone "
     install_code    = " code --install-extension "
     install_yay     = " yay -S --noconfirm "
-    remove_yay      = " yay -Rcns "
+    remove_yay      = " yay -Rcns --noconfirm"
 
 #########################################################################
 #########################################################################
@@ -79,6 +79,11 @@ def uninstall_packages():
 
 def install_packages():
     print(common.Purple + "=== Installing necessary software for this dotfiles ===" + common.NC)
+    perform_required_pckg_action(PackageAction.remove_yay,
+    [   
+         "picom",
+    ])
+
     perform_required_pckg_action(PackageAction.install_yay,
     [   
          "zsh", "kitty", "ulauncher", "flameshot", "polybar",
@@ -88,7 +93,7 @@ def install_packages():
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
          "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto",
-         "tmux", "i3exit",
+         "tmux", "i3exit", "picom-git", 
     ])
 
     print(common.Purple + "=== Installing optional software for this dotfiles ===" + common.NC)
