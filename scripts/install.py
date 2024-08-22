@@ -93,7 +93,7 @@ def install_packages():
          "pulseaudio", "spotify", "pavucontrol", "playerctl",
          "python-pywal", "colorz", "visual-studio-code-bin",
          "ttf-font-awesome 6", "ttf-jetbrains-mono-nerd", "ttf-roboto",
-         "tmux", "i3exit", "picom-git", 
+         "tmux", "i3exit", "picom-git", "rust", 
     ])
 
     print(common.Purple + "=== Installing optional software for this dotfiles ===" + common.NC)
@@ -204,8 +204,7 @@ def main():
 if __name__ == "__main__":
     main()
 
-# TODO: Colored dygma?
-# TODO: Neofetch image not working with tmux
+# TODO: Better picom configuration too much transparency
 # TODO: Pretty tmux
 # TODO: Spicetify
 # TODO: Install intel advisor as optional

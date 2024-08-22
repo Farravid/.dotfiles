@@ -1,2 +1,6 @@
 # Python
 __pycache__
+
+# Dygma
+dygma/target/
+dygma/Cargo.lock
