@@ -48,7 +48,7 @@ def launch_multithreading():
     launch_app("code ~/Documents/GitHub/multithreading", "Multithreading C++")
     launch_app("obsidian", "Obsidian")
     launch_app("github-desktop", "Github Desktop")
-    launch_app("okular ~/Documents/GitHub/obsidian-vault/Books/C++\ Concurrency\ in\ Action.pdf", "Okular")
+    launch_app("okular ~/Documents/GitHub/obsidian-vault/Books/C++\\ Concurrency\\ in\\ Action.pdf", "Okular")
 
 def main():
     options = [
