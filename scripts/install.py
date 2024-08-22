@@ -204,7 +204,6 @@ def main():
 if __name__ == "__main__":
     main()
 
-# TODO: Better picom configuration too much transparency
 # TODO: Pretty tmux
 # TODO: Spicetify
 # TODO: Install intel advisor as optional
