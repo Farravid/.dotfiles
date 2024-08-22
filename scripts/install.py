@@ -83,7 +83,7 @@ def install_packages():
     [   
          "picom",
     ])
-
+    
     perform_required_pckg_action(PackageAction.install_yay,
     [   
          "zsh", "kitty", "ulauncher", "flameshot", "polybar",
@@ -100,8 +100,8 @@ def install_packages():
     perform_optional_pckg_actions(PackageAction.install_yay,
     [  
          "fsearch", "hotspot", "appimagelauncher",
-         "cli-visualizer", "pipes.sh", "bottom", "obs-studio", "benchmark",
-         "okular", "slack-desktop",                                                     
+         "cli-visualizer", "pipes.sh", "bottom", "obs-studio",
+         "okular", "slack-desktop", "ranger", "bazecor",                                                     
     ])
 
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
@@ -110,6 +110,13 @@ def install_packages():
          "clang", "cmake", "ccache", "gdb",
          "conan",                                                      
     ])
+
+#########################################################################
+
+def enable_bluetooth():
+    perform_required_pckg_action(PackageAction.install_yay, ["bluez", "bluez-utils"])
+    subprocess.run("systemctl enable bluetooth.service", shell=True)
+    subprocess.run("sudo systemctl enable bluetooth", shell=True) 
 
 #########################################################################
 
@@ -138,7 +145,8 @@ def install_code_extensions():
         "ms-python.vscode-pylance", "ms-python.python", "ms-python.debugpy",
         "tal7aouy.theme", "dlasagno.wal-theme", "naumovs.color-highlight",
         "eamodio.gitlens", "yzhang.markdown-all-in-one",
-        "ms-vscode.cmake-tools", "twxs.cmake", "aaron-bond.better-comments",                          
+        "ms-vscode.cmake-tools", "twxs.cmake", "aaron-bond.better-comments",
+        "adpyke.codesnap",                          
     ])
 
 #########################################################################
@@ -176,6 +184,7 @@ def main():
     """)
     
     uninstall_packages()
+    enable_bluetooth()
     install_packages()
     install_spicetify()
     install_oh_my_zsh()
@@ -195,8 +204,9 @@ def main():
 if __name__ == "__main__":
     main()
 
-# TODO: Learn and config tmux
+# TODO: Colored dygma?
+# TODO: Neofetch image not working with tmux
+# TODO: Pretty tmux
 # TODO: Spicetify
-# TODO: Fix blueetoth
 # TODO: Install intel advisor as optional
 # TODO: Tilling direction on polybar?

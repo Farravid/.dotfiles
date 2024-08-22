@@ -92,10 +92,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-## Launching tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   exec tmux
-# fi
+# Launching tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

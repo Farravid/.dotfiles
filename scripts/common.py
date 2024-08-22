@@ -42,6 +42,7 @@ def perform_sym_links():
                         ".gitconfig", 
                         ".profile",
                         ".zshrc",
-                        ".p10k.zsh"
+                        ".p10k.zsh",
+                        ".tmux.conf",
                     ])
 

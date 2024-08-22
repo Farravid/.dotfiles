@@ -16,7 +16,7 @@
     ],
     "window.menuBarVisibility": "toggle",
     "extensions.ignoreRecommendations": true,
-    "workbench.colorTheme": "Theme Darker",
+    "workbench.colorTheme": "GitHub Dark",
     "C_Cpp.default.cppStandard": "c++23",
     "C_Cpp.default.cStandard": "c23",
     "C_Cpp.autocompleteAddParentheses": true,
