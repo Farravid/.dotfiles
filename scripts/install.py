@@ -101,7 +101,7 @@ def install_packages():
     [  
          "fsearch", "hotspot", "appimagelauncher",
          "cli-visualizer", "pipes.sh", "bottom", "obs-studio",
-         "okular", "slack-desktop", "ranger", "bazecor",                                                     
+         "okular", "slack-desktop", "yazi", "bazecor",                                                     
     ])
 
     print(common.Purple + "=== Installing useful C++ software for this dotfiles ===" + common.NC)
@@ -204,6 +204,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+# TODO: How to avoid tmux for cli-visualizer 
 # TODO: Pretty tmux
 # TODO: Spicetify
 # TODO: Install intel advisor as optional

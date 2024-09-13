@@ -39,6 +39,8 @@ def perform_sym_links():
                         ".config/Code/User/keybindings.json",
                         ".config/spicetify/config-xpui.ini",
                         ".config/i3/config",
+                        ".config/vis/config",
+                        ".config/vis/colors/pywal",
                         ".gitconfig", 
                         ".profile",
                         ".zshrc",
